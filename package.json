@@ -1,0 +1,22 @@
+{
+  "name": "thermometer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginnyamazed/thermometer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginnyamazed/thermometer/issues"
+  },
+  "homepage": "https://github.com/ginnyamazed/thermometer#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}
