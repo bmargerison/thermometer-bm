@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ginnyamazed/thermometer#readme",
   "dependencies": {
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "prompt-sync": "^4.2.0",
+    "readline-sync": "^1.4.10"
   }
 }
