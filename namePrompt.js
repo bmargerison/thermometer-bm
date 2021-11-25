@@ -1,5 +1,5 @@
-const prompt = require("prompt-sync")();
+const readlineSync = require("readline");
 
 
-let name = prompt('What is your name?');
+let name = readlineSync.question('What is your name? ');
 console.log(`Welcome ${name}`)
