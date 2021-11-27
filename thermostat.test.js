@@ -1,4 +1,9 @@
 const Thermostat = require("./thermostat.js");
+const WeatherApi = require("./weatherApi.js");
+const callback = (result) => {
+  console.log(result);
+}
+
 
 describe("thermostat", () => {
   test("starts at 20 degrees", () => {
@@ -77,4 +82,13 @@ describe("thermostat", () => {
     }
     expect(thermostat.getCurrentUsage()).toBe("high-usage");
   });
+
+  test("returns the current temperature from the openweatehrAPI", () => {
+    thermostat = new Thermostat();
+    thermostat.setCity('London');
+    jest.spyOn(WeatherApi.prototype, 'fetchWeatherData').mockImplementation(() => '2.5');
+    let weather = new WeatherApi();
+    thermostat.getTemperature();
+    expect(thermostat.temperature).toBe(2.5);
+  })
 });

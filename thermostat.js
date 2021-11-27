@@ -1,10 +1,14 @@
+const WeatherApi = require("./weatherApi");
+
 const min_temp = 10;
 
 class Thermostat {
-  constructor() {
+  constructor(weather) {
     this.temperature = 20;
     this.maxTemp = 25;
     this.powerSaving = true;
+    this.city = undefined;
+    this.weather = weather
   }
 
   up() {
@@ -38,6 +42,14 @@ class Thermostat {
     } else {
       return "high-usage";
     }
+  }
+
+  setCity(city) {
+    this.city = city
+  }
+
+  getTemperature() {
+    this.weather.fetchWeatherData(this.city, callback)
   }
 }
 
