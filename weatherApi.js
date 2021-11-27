@@ -1,8 +1,5 @@
 const got = require('got');
 const apiKey = require('./api_key');
-const callback = (result) => {
-  console.log(result);
-}
 
 class WeatherApi {
 

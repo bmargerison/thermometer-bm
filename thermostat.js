@@ -1,4 +1,6 @@
-const WeatherApi = require("./weatherApi");
+const callback = (result) => {
+  console.log(result);
+}
 
 const min_temp = 10;
 
@@ -7,7 +9,6 @@ class Thermostat {
     this.temperature = 20;
     this.maxTemp = 25;
     this.powerSaving = true;
-    this.city = undefined;
     this.weather = weather
   }
 
@@ -44,12 +45,8 @@ class Thermostat {
     }
   }
 
-  setCity(city) {
-    this.city = city
-  }
-
-  getTemperature() {
-    this.weather.fetchWeatherData(this.city, callback)
+  getTemperature(city) {
+    this.weather.fetchWeatherData(city, callback)
   }
 }
 
